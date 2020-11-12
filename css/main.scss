@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+h2 {
+  font-size: 4.5rem;
+  padding: 2rem 0;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+a {
+  color: white;
+  min-height: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+.icon {
+  min-height: 3.1rem;
+  font-size: 3.1rem;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.2rem;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+main {
+  width: 80%;
+  display: block;
+  margin: 15rem auto auto;
+  text-align: center;
+  z-index: 0;
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: rgb(7, 7, 7);
+
+  .footer-div {
+    width: 80%;
+    margin: auto;
+    padding: 2vh;
+    color: white;
+  }
+}
+
+@import "navbar";
+@import "destination";

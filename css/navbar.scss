@@ -1,0 +1,64 @@
+header {
+  background-color: rgb(7,7,7);
+  margin-bottom: 2rem;
+
+  .nav-container {
+    width: 80%;
+    margin: auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav {
+      display: flex;
+      justify-content: space-evenly;
+      flex: 2;
+
+      .icon {
+        display: none;
+      }
+    }
+
+    #logo {
+      flex: 3
+    }
+
+    @media screen and (max-width: 1200px) {
+      nav {
+        justify-content: right;
+        a {display: none;}
+        a.icon {
+          display: flex;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      nav.responsive {
+        display: block;
+        position: relative;
+
+        a {
+          display: block;
+          text-align: right;
+          padding-bottom: 1rem;
+
+          .icon {
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px){
+    .nav-container {
+      position: relative;
+      display: block;
+      #logo {
+        position: absolute;
+      }
+    }
+  }
+}
