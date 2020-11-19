@@ -26,7 +26,7 @@ header {
 
     @media screen and (max-width: 1200px) {
       nav {
-        justify-content: right;
+        justify-content: flex-end;
         a {display: none;}
         a.icon {
           display: flex;
@@ -36,16 +36,14 @@ header {
 
     @media screen and (max-width: 1200px) {
       nav.responsive {
-        display: block;
-        position: relative;
-
+        display: flex;
+        flex-direction: column;
         a {
           display: block;
           text-align: right;
           padding-bottom: 1rem;
 
           .icon {
-            position: absolute;
           }
         }
       }
@@ -54,11 +52,8 @@ header {
 
   @media screen and (max-width: 1200px){
     .nav-container {
-      position: relative;
-      display: block;
-      #logo {
-        position: absolute;
-      }
+      display: flex;
+      align-items: flex-start;
     }
   }
 }
