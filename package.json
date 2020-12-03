@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "lit-element": "^2.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.0"
   }
 }
