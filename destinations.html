@@ -8,122 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300;400&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>ING Tech Travel</title>
 </head>
 <body>
 <header>
-    <div class="nav-container">
-        <h1 id="logo">ING Tech Travel</h1>
-        <nav>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="index.html">Home</a>
-            <a href="#">Destinations</a>
-            <a href="#">Language</a>
-        </nav>
-    </div>
+    <app-navigation></app-navigation>
 </header>
 
 <main>
-    <section class="destinations">
-        <article>
-            <picture>
-                <source srcset="https://picsum.photos/750/419.jpg">
-                <img src="https://picsum.photos/200/112.jpg" alt="Destination_1">
-            </picture>
-            <h3>Destination 1</h3>
-            <h4>Destination_1 Subtitle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam asperiores commodi
-                ea eaque et explicabo fuga ipsa, ipsam ipsum itaque maxime neque numquam odit quae recusandae
-                reiciendis ut.
-            </p>
-            <a href="">More Details</a>
-        </article>
-        <article>
-            <picture>
-                <source srcset="https://picsum.photos/750/420.jpg">
-                <img src="https://picsum.photos/200/112.jpg" alt="Destination_1">
-            </picture>
-            <h3>Destination 2</h3>
-            <h4>Destination_2 Subtitle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam asperiores commodi
-                ea eaque et explicabo fuga ipsa, ipsam ipsum itaque maxime neque numquam odit quae recusandae
-                reiciendis ut.
-            </p>
-            <a href="">More Details</a>
-        </article>
-        <article>
-            <picture>
-                <source srcset="https://picsum.photos/750/421.jpg">
-                <img src="https://picsum.photos/200/112.jpg" alt="Destination_1">
-            </picture>
-            <h3>Destination 3</h3>
-            <h4>Destination_3 Subtitle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam asperiores commodi
-                ea eaque et explicabo fuga ipsa, ipsam ipsum itaque maxime neque numquam odit quae recusandae
-                reiciendis ut.
-            </p>
-            <a href="">More Details</a>
-        </article>
-        <article>
-            <picture>
-                <source srcset="https://picsum.photos/750/422.jpg">
-                <img src="https://picsum.photos/200/112.jpg" alt="Destination_1">
-            </picture>
-            <h3>Destination 4</h3>
-            <h4>Destination_4 Subtitle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam asperiores commodi
-                ea eaque et explicabo fuga ipsa, ipsam ipsum itaque maxime neque numquam odit quae recusandae
-                reiciendis ut.
-            </p>
-            <a href="">More Details</a>
-        </article>
-        <article>
-            <picture>
-                <source srcset="https://picsum.photos/750/423.jpg">
-                <img src="https://picsum.photos/200/112.jpg" alt="Destination_1">
-            </picture>
-            <h3>Destination 5</h3>
-            <h4>Destination_5 Subtitle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam asperiores commodi
-                ea eaque et explicabo fuga ipsa, ipsam ipsum itaque maxime neque numquam odit quae recusandae
-                reiciendis ut.
-            </p>
-            <a href="">More Details</a>
-        </article>
-        <article>
-            <picture>
-                <source srcset="https://picsum.photos/750/424.jpg">
-                <img src="https://picsum.photos/200/112.jpg" alt="Destination_1">
-            </picture>
-            <h3>Destination 6</h3>
-            <h4>Destination_6 Subtitle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam asperiores commodi
-                ea eaque et explicabo fuga ipsa, ipsam ipsum itaque maxime neque numquam odit quae recusandae
-                reiciendis ut.
-            </p>
-            <a href="">More Details</a>
-        </article>
-    </section>
+    <section-destinations></section-destinations>
 </main>
-<footer>
-    <div class="footer-div">
-        <p>&copy;Ing Tech Travel</p>
-    </div>
-</footer>
 
-<script>
-    function myFunction() {
-        var x = document.querySelector('nav');
-        if (x.className === "") {
-            x.className = "responsive";
-        } else {
-            x.className = "";
-        }
-    }
-</script>
+<app-footer></app-footer>
+
+<script type="module" src="src/components/Navigation.js"></script>
+<script type="module" src="src/components/Destinations.js"></script>
+<script type="module" src="src/components/Footer.js"></script>
 </body>
 </html>

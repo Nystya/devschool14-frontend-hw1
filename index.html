@@ -14,99 +14,20 @@
 </head>
 <body>
 <header>
-    <div class="nav-container">
-        <h1 id="logo">ING Tech Travel</h1>
-        <nav>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="#">Home</a>
-            <a href="destinations.html">Destinations</a>
-            <a href="#">Language</a>
-        </nav>
-    </div>
+    <app-navigation></app-navigation>
 </header>
 
 <main>
-    <section>
-        <h2>Welcome to ING Tech Travel</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam animi consequatur distinctio ea,
-            facere ipsa minus obcaecati odit quae quaerat quos repellendus tempore? Ad ducimus ea eos excepturi iusto
-            optio possimus, vel. Ea eius eligendi, excepturi hic maiores molestias officiis quam quod tenetur unde.
-            Autem commodi impedit possimus, provident qui quos sequi similique suscipit totam voluptates! Adipisci aut
-            consequuntur deleniti laudantium magni modi quos, sed totam. A eos, excepturi labore nam necessitatibus
-            nulla provident rerum temporibus veniam vero. Atque aut consequatur debitis enim id illum magni minima,
-            necessitatibus nemo nesciunt nisi omnis possimus quaerat quia repellendus sit tempore, voluptatum!</p>
-    </section>
-    <section>
-        <article>
-            <picture>
-                <source media="(min-width:800px)" srcset="https://picsum.photos/1920/1079.jpg">
-                <img src="https://picsum.photos/200/112.jpg" alt="Destination_1">
-            </picture>
-            <h3>Destination 1</h3>
-            <h4>Destination_1 Subtitle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis debitis eligendi enim eos error illo
-                in inventore ipsum iste laboriosam maiores maxime nam omnis quas qui quod ratione saepe sint, sit
-                suscipit veniam voluptas voluptatibus voluptatum. A ab accusantium adipisci architecto assumenda aut
-                cumque dolore eius, expedita fuga impedit ipsum, libero modi molestiae natus officia optio placeat quas,
-                sit voluptatibus. Accusamus asperiores corporis delectus facere fugit inventore ipsam, iusto mollitia
-                nisi officiis perferendis provident repudiandae sapiente velit veniam? Fuga incidunt labore odit. Alias
-                aut culpa debitis dolores error et expedita fugiat fugit hic, illum, inventore iusto minima natus
-                necessitatibus numquam officiis omnis optio possimus quam quis ratione sint velit, voluptatum?
-            </p>
-        </article>
-        <article>
-            <picture>
-                <source media="(min-width:800px)" srcset="https://picsum.photos/1920/1080.jpg">
-                <img src="https://picsum.photos/200/112.jpg" alt="Destination_1">
-            </picture>
-            <h3>Destination 2</h3>
-            <h4>Destination_2 Subtitle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium distinctio dolor fugiat, ipsam
-                magnam minus nemo vel velit voluptatem. At beatae consectetur consequuntur delectus deserunt eaque
-                fugiat magni modi molestias nihil pariatur qui quo repellat repudiandae rerum, ullam voluptatem!
-                Aspernatur consectetur corporis debitis eligendi esse, excepturi id impedit ipsum laborum nesciunt
-                numquam obcaecati officiis, pariatur, perspiciatis quibusdam. A architecto at consequuntur delectus
-                earum eius facilis iste itaque nostrum optio perspiciatis quam, quidem recusandae rem repellendus
-                tempora tempore vel, voluptate voluptatem?
-            </p>
-        </article>
-        <article>
-            <picture>
-                <source media="(min-width:800px)" srcset="https://picsum.photos/1920/1081.jpg">
-                <img src="https://picsum.photos/200/112.jpg" alt="Destination_1">
-            </picture>
-            <h3>Destination 3</h3>
-            <h4>Destination_3 Subtitle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolor excepturi exercitationem sed voluptas.
-                Alias eius est quod vitae. Cumque, officia, similique? Accusamus alias atque commodi cumque enim eum
-                eveniet expedita id inventore ipsum natus nisi officiis quas reiciendis sequi, similique totam vero?
-                Culpa dicta ex facere illum in minus modi porro sequi tempora vitae. Dolor dolorum eos et excepturi
-                harum laboriosam tempore. Accusamus accusantium aperiam aspernatur autem consectetur dolorum eius
-                eveniet fugiat, illum ipsum mollitia nam nemo non, perspiciatis quas totam veritatis voluptate
-                voluptates? Architecto autem cupiditate est fugiat labore magnam nemo nisi reprehenderit repudiandae,
-                rerum veritatis voluptates voluptatum.
-            </p>
-        </article>
-    </section>
+    <welcome-section></welcome-section>
+
+    <article-posts-section></article-posts-section>
 </main>
 
-<footer>
-    <div class="footer-div">
-        <p>&copy;Ing Tech Travel</p>
-    </div>
-</footer>
+<app-footer></app-footer>
 
-<script>
-    function myFunction() {
-        var x = document.querySelector('nav');
-        if (x.className === "") {
-            x.className = "responsive";
-        } else {
-            x.className = "";
-        }
-    }
-</script>
+<script type="module" src="src/components/Navigation.js"></script>
+<script type="module" src="src/components/WelcomeIntro.js"></script>
+<script type="module" src="src/components/ArticlePosts.js"></script>
+<script type="module" src="src/components/Footer.js"></script>
 </body>
 </html>
