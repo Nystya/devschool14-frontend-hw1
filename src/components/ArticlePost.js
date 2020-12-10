@@ -59,7 +59,7 @@ class ArticlePost extends LitElement {
           article {
             display: block;
             min-height: 25rem;
-            max-width: 80%;
+            max-width: 75%;
             margin: auto;
             padding: 5rem 0;
           }

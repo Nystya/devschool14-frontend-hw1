@@ -58,7 +58,7 @@ class ArticlePosts extends LitElement {
                     id: articleId,
                     value: articles[articleId]
                 }
-            })
+            }).reverse()
         }).catch((err) => {
             console.log(err);
         });
