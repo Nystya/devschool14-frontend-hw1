@@ -5,27 +5,27 @@ class ArticlePost extends LitElement {
         return html`
             <article>
                 <picture>
-                    <source media="(min-width:800px)" srcset="https://picsum.photos/1920/${this.pictureHeight + this.id}.jpg">
-                    <img src="https://picsum.photos/200/112.jpg" alt="Destination_${this.id}">
+                    ${this.sources.map((source) => {
+                        return html`
+                            <source media="(min-width:800px)" srcset="${source}">
+                        `;
+                    })}
+                    <img src="${this.sources[this.sources.length-1]}" alt="Destination_${this.id}">
                 </picture>
-                <h3>Destination ${this.id}</h3>
-                <h4>Destination_${this.id} Subtitle</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis debitis eligendi enim eos error illo
-                    in inventore ipsum iste laboriosam maiores maxime nam omnis quas qui quod ratione saepe sint, sit
-                    suscipit veniam voluptas voluptatibus voluptatum. A ab accusantium adipisci architecto assumenda aut
-                    cumque dolore eius, expedita fuga impedit ipsum, libero modi molestiae natus officia optio placeat quas,
-                    sit voluptatibus. Accusamus asperiores corporis delectus facere fugit inventore ipsam, iusto mollitia
-                    nisi officiis perferendis provident repudiandae sapiente velit veniam? Fuga incidunt labore odit. Alias
-                    aut culpa debitis dolores error et expedita fugiat fugit hic, illum, inventore iusto minima natus
-                    necessitatibus numquam officiis omnis optio possimus quam quis ratione sint velit, voluptatum?
-                </p>
+                <h3>${this.title}</h3>
+                <h4>${this.subtitle}</h4>
+                <p>${this.description}</p>
             </article>
         `;
     }
 
     static get properties() {
         return {
-            id: {type: Number},
+            id: {type: String},
+            title: {type: String},
+            subtitle: {type: String},
+            description: {type: String},
+            sources: {type: Array}
         }
     }
 
@@ -59,7 +59,7 @@ class ArticlePost extends LitElement {
           article {
             display: block;
             min-height: 25rem;
-            max-width: 80%;
+            max-width: 75%;
             margin: auto;
             padding: 5rem 0;
           }

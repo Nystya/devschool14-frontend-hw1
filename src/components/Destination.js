@@ -5,29 +5,34 @@ class Destination extends LitElement {
         return html`
             <article>
                 <picture>
-                    <!-- Hack to force picsum to return different images by using different heights -->
-                    <source srcset="https://picsum.photos/750/${this.pictureHeight + this.id}.jpg">
-                    <img src="https://picsum.photos/200/112.jpg" alt="Destination_1">
+                    ${this.sources.map((source) => {
+						return html`
+							<source srcset="${source}">
+						`;
+                    })}
+                    <img src="${this.sources[this.sources.length-1]}" alt="${this.title} Photo">
                 </picture>
-                <h3>Destination ${this.id}</h3>
-                <h4>Destination_${this.id} Subtitle</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam asperiores commodi
-                    ea eaque et explicabo fuga ipsa, ipsam ipsum itaque maxime neque numquam odit quae recusandae
-                    reiciendis ut.
-                </p>
-                <a href="">More Details</a>
+                <h3>${this.title}</h3>
+                <h4>${this.subtitle}</h4>
+                <p>${this.description}</p>
+                <a href="${this.more}">More Details</a>
             </article>
         `;
     }
 
     static get properties() {
         return {
-            id: {type: Number},
+            id: {type: String},
+            title: {type: String},
+            subtitle: {type: String},
+            description: {type: String},
+            sources: {type: Array},
+            more: {type: String}
         };
     }
 
     constructor() {
-        super();
+		super();
 
         this.pictureHeight = 420;
     }
@@ -50,14 +55,14 @@ class Destination extends LitElement {
 
           p {
             font-family: 'Open Sans', sans-serif;
-            font-size: 2.2rem;
+            font-size: 1.7rem;
           }
 
           a {
             color: white;
             min-height: 2.5rem;
             font-size: 2.5rem;
-            font-weight: lighter;
+            font-weight: bold;
             text-decoration: none;
           }
 
