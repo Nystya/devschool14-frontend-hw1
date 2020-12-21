@@ -1,5 +1,7 @@
-import {LitElement, html, css} from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
-import ArticlePost from "./ArticlePost.js";
+import {LitElement, html, css} from "lit-element";
+import "./ArticlePost.js";
+
+const axios = require('axios').default
 
 const baseURL = 'https://devschool-2020.firebaseio.com/vajaiala-catalin/'
 class ArticlePosts extends LitElement {
@@ -31,7 +33,7 @@ class ArticlePosts extends LitElement {
     constructor() {
         super();
 
-        this.axios = window.axios.create({
+        this.axios = axios.create({
             baseURL: baseURL,
             timeout: 10000,
         });
@@ -83,4 +85,4 @@ class ArticlePosts extends LitElement {
     }
 }
 
-customElements.define('article-posts-section', ArticlePosts);
+export default customElements.define('article-posts-section', ArticlePosts);

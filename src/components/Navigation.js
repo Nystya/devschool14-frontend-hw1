@@ -1,4 +1,4 @@
-import {LitElement, html, css} from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
+import {LitElement, html, css} from "lit-element";
 
 class Navigation extends LitElement {
     render() {
@@ -12,8 +12,8 @@ class Navigation extends LitElement {
                     <a href="javascript:void(0);" class="icon" @click="${this.handleMenuToggle}">
                         <i class="fa fa-bars"></i>
                     </a>
-                    <a href="index.html">Home</a>
-                    <a href="destinations.html">Destinations</a>
+                    <a href="index">Home</a>
+                    <a href="destinations">Destinations</a>
                     <a href="#">Language</a>
                 </nav>
             </div>
@@ -130,4 +130,4 @@ class Navigation extends LitElement {
     }
 }
 
-customElements.define('app-navigation', Navigation);
+export default customElements.define('app-navigation', Navigation);

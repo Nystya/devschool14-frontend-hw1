@@ -1,4 +1,4 @@
-import {LitElement, html, css} from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
+import {LitElement, html, css} from "lit-element";
 
 class Footer extends LitElement {
     render() {
@@ -48,4 +48,4 @@ class Footer extends LitElement {
     }
 }
 
-customElements.define('app-footer', Footer);
+export default customElements.define('app-footer', Footer);

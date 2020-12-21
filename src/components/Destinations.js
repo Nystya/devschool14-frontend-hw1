@@ -1,5 +1,7 @@
-import {LitElement, html, css} from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
+import {LitElement, html, css} from "lit-element";
 import Destination from "./Destination.js";
+
+const axios = require('axios').default
 
 const baseURL = 'https://devschool-2020.firebaseio.com/vajaiala-catalin/'
 class Destinations extends LitElement {
@@ -32,7 +34,7 @@ class Destinations extends LitElement {
     constructor() {
         super();
 
-        this.axios = window.axios.create({
+        this.axios = axios.create({
             baseURL: baseURL,
             timeout: 10000,
         })
@@ -82,4 +84,4 @@ class Destinations extends LitElement {
     }
 }
 
-customElements.define('section-destinations', Destinations);
+export default customElements.define('section-destinations', Destinations);
