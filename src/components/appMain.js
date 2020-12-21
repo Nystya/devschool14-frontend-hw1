@@ -9,17 +9,11 @@ import "./Footer.js"
 class MainComponent extends LitElement {
     render() {
         return html`
-            <header>
-                <app-navigation></app-navigation>
-            </header>
-            
             <main>
                 <welcome-section></welcome-section>
 
                 <article-posts-section></article-posts-section>
             </main>
-
-            <app-footer></app-footer>
         `;
     }
 

@@ -9,15 +9,9 @@ import "./Footer.js"
 class MainDestionationsComponent extends LitElement {
     render() {
         return html`
-            <header>
-                <app-navigation></app-navigation>
-            </header>
-            
             <main>
                 <section-destinations></section-destinations>
             </main>
-
-            <app-footer></app-footer>
         `;
     }
 

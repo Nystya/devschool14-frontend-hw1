@@ -12,8 +12,8 @@ class Navigation extends LitElement {
                     <a href="javascript:void(0);" class="icon" @click="${this.handleMenuToggle}">
                         <i class="fa fa-bars"></i>
                     </a>
-                    <a href="index">Home</a>
-                    <a href="destinations">Destinations</a>
+                    <a href="/">Home</a>
+                    <a href="/destinations">Destinations</a>
                     <a href="#">Language</a>
                 </nav>
             </div>
